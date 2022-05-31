@@ -1,0 +1,1 @@
+-|<cms:folders masterpage='conditional-original.php'><cms:concat k_folder_name '|'/></cms:folders>
