@@ -15,3 +15,11 @@
     set_time_limit(100);
 </cms:php>
 ```
+
+## fake pagination
+
+```html
+<cms:php>
+    $_GET['pg'] = 5;
+</cms:php>
+```

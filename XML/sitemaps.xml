@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <sitemap><loc>http://my.couch/sitemap-common.xml</loc></sitemap>
+
+    <sitemap><loc>http://my.couch/sitemap-articles.xml</loc></sitemap>
+
+    <sitemap><loc>http://my.couch/sitemap-products.xml</loc></sitemap>
+
+    <sitemap><loc>http://my.couch/sitemap-articles-images.xml</loc></sitemap>
+
+    <sitemap><loc>http://my.couch/sitemap-products-images.xml</loc></sitemap>
+
+    <sitemap><loc>http://my.couch/sitemap-videos.xml</loc></sitemap>
+
+</urlset>

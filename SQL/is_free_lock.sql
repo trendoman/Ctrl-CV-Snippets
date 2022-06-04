@@ -1,0 +1,1 @@
+SELECT IS_FREE_LOCK('lock_job_sitemap') AS lck

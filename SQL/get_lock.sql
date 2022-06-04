@@ -1,0 +1,1 @@
+SELECT GET_LOCK('lock_job_sitemap', 1) AS lck
