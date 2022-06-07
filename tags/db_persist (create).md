@@ -1,6 +1,23 @@
 # db_persist mode='create'
 
 ```html
+<cms:repeat count=mypagination_limit >
+
+     <cms:db_persist
+         _masterpage = k_template_name
+         _mode = 'create'
+         _auto_title = '1'
+         _fields = '' >
+
+         <cms:if k_success>
+         <cms:else />
+         </cms:if>
+     </cms:db_persist>
+
+</cms:repeat>
+```
+
+```html
 <cms:test
     ignore='0'>
 
