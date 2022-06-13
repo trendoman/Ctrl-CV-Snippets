@@ -1,0 +1,4 @@
+body{ font-size: 0.85rem; background-color: #eeeded; overflow:hidden; }
+pre { padding: .8rem; font-family:Monospace; margin:0; line-height:1; }
+code{ padding: .2rem .4rem; background-color: #fafafa; line-height:1.5 }
+td, th{padding: .3rem .5rem; vertical-align: top; text-align: left; max-width: 50%;}

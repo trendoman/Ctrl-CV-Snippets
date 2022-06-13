@@ -1,0 +1,4 @@
+<image:image>
+   <image:loc><cms:show blog_i_page_d/></image:loc>
+   <image:title><cms:show k_page_title/></image:title>
+</image:image>

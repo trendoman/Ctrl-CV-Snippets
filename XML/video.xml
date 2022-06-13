@@ -1,0 +1,13 @@
+<url>
+   <loc><cms:show k_site_link/><cms:show k_page_name/>.html</loc>
+   <cms:show_repeatable 'pr_video_elements'>
+
+      <video:video>
+         <video:player_loc allow_embed="yes">https://www.youtube.com/v/<cms:show pr_vid_id/></video:player_loc>
+         <video:thumbnail_loc>https://img.youtube.com/vi/<cms:show pr_vid_id/>/0.jpg</video:thumbnail_loc>
+         <video:title><cms:show pr_vid_tit/></video:title>
+         <video:description><cms:show pr_vid_dsc/></video:description>
+      </video:video>
+
+   </cms:show_repeatable>
+</url>
