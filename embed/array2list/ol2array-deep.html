@@ -1,0 +1,31 @@
+<cms:func _into='data' item=''><cms:addslashes><cms:excerpt count='10' trail='..' truncate_chars='1'><cms:show item /></cms:excerpt></cms:addslashes></cms:func>
+<cms:func _into='leafkey' item=''><cms:show item />:&nbsp;</cms:func>
+<cms:func _into='leafval' item=''><cms:show item /></cms:func>
+<cms:func _into='nodekey' item=''>[<cms:show item />]:&nbsp;</cms:func>
+<cms:func _into='nodecnt' item=''>[<cms:array_count item />]</cms:func>
+<cms:func _into='nodeval' item='' level="<cms:add k_named_args.level '1' />">
+   <cms:if "<cms:array_count item />">
+      <cms:call 'embed' 'ol2array-deep.html' array=item level=level/>
+   </cms:if>
+</cms:func>
+
+<cms:set type="" />
+<cms:repeat count="<cms:add k_named_args.level '1' />">
+   <cms:set type="<cms:zebra '1' 'a' 'A' 'i' 'I' />" scope='parent' />
+</cms:repeat>
+
+<ol type="<cms:show type />" >
+<cms:each k_named_args.array key='key' as='value'>
+   <cms:if "<cms:is_array value />">
+      <li data-key="<cms:call data key />" data-value="<cms:call data "Array<cms:call nodecnt value />" />"><cms:call nodekey key /><cms:call nodeval value /></li>
+   <cms:else />
+      <li data-key="<cms:call data key />" data-value="<cms:call data value />"><cms:call leafkey key /><cms:call leafval value /></li>
+   </cms:if>
+</cms:each>
+</ol>
+
+<cms:ignore>
+   ---
+   Example: <cms:call 'embed' 'ol2array-deep.html' array=k__gpc />
+   ---
+</cms:ignore>

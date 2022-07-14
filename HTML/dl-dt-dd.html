@@ -1,0 +1,41 @@
+<dl>
+<dt>
+
+mandatory line for a template to become Couch-powered. No spaces before the opening tag!
+
+</dt>
+<dd>
+
+```php
+<?php require_once( 'couch/cms.php' ); ?>
+<?php COUCH::invoke(); ?>
+```
+
+</dd>
+<dt>
+
+good for sub-domain
+
+</dt>
+<dd>
+
+```php
+<?php require_once( $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR/*."".*/.'couch/cms.php' ); ?>
+```
+
+</dd>
+
+<dt>
+
+disable default routes
+
+</dt>
+<dd>
+
+```php
+<?php COUCH::invoke( K_IGNORE_CONTEXT ); ?>
+```
+
+</dd>
+
+</dl>
