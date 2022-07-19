@@ -53,3 +53,4 @@ foreach ($channels as $channel) {
 // Close the multi-handle and return our results
 curl_multi_close($multi);
 ```
+

@@ -1,0 +1,6 @@
+<cms:field 'contact_form_ip_address' order='5'>
+   <cms:input name=k_field_name type='bound' trust_mode='1'/>
+   <cms:if "<cms:validate value=contact_form_ip_address validator='ip_address'/>">
+       <span class="desc"><a href="http://ipaddress.is/<cms:show contact_form_ip_address />" target="_blank">Информация за IP адреса</a></span>
+   </cms:if>
+</cms:field>

@@ -1,0 +1,8 @@
+debug->>open key map->>paste-this:
+
+{
+    "documentation": "https://github.com/adobe/brackets/wiki/User-Key-Bindings",
+    "overrides": {
+        "Delete": "file.delete"
+    }
+}

@@ -1,0 +1,25 @@
+/*!
+ * Bootstrap v2.2.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10;background-color:#fff}
+.modal-backdrop.fade{opacity:0}
+.modal-backdrop,.modal-backdrop.fade.in{opacity:.50;filter:alpha(opacity=50)}
+.modal{position:fixed;top:10%;left:50%;z-index:20;width:830px;padding:28px;border:1px solid #c9c9c9;margin-left:-415px;background-color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.25);outline:none}
+.modal.fade{-webkit-transition:opacity .3s linear,top .3s ease-out;-moz-transition:opacity .3s linear,top .3s ease-out;transition:opacity .3s linear,top .3s ease-out;top:-25%}
+.modal.fade.in{top:15%}
+.modal-body{position:relative;overflow-y:auto !important;max-height:500px}
+.modal-close{display:block;width:19px;height:20px;line-height:20px;position:absolute;top:6px;right:6px;padding:0;border:0;-webkit-appearance:none;font-size:20px;font-weight:bold;background-color:transparent;color:#ccc;cursor:pointer;-moz-transition:color .15s linear;-webkit-transition:color .15s linear;transition:color .15s linear}
+.modal-close:hover,.modal-close:focus{color:#888}
+.hide{display:none}
+.fade{opacity:0;-webkit-transition:opacity .15s linear;-moz-transition:opacity .15s linear;transition:opacity .15s linear}
+.fade.in{opacity:1}
+.opacity-hide{opacity:0}
+.ajax-loader{display:none;position:absolute;top:50%;left:50%;margin:-16px 0 0 -16px}
+#cart-modal>.modal-body{-moz-transition:opacity .25s linear;-webkit-transition:opacity .25s linear;transition:opacity .25s linear}
+#cart-modal>.modal-body>.info{margin:0}

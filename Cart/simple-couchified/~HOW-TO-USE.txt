@@ -1,0 +1,12 @@
+
+1. First register all 5 templates in this folder with Couch by accessing each of them as super-admin.
+   (if you have placed these files in a sub-folder (instead of the site's root) their 'template_name' 
+   as known by Couch will now have the sub-folder(s) prepended. Make sure to edit 'couch/addons/cart/config.php'
+   to specify the modified names.
+
+2. If while registering the templates, in step 1 above, you get an error message like 'ERROR! Unknown tag: "pp_config"',
+   the cart module has not been enabled. Please do so in 'couch/addons/kfunctions.php' by uncommenting the line that includes the cart script.
+
+3. Rename 'cart_ex.example.php' found in 'couch/addons/cart/' folder to 'cart_ex.php' to include the custom calculations contained in it.
+
+4. Start creating products in admin-panel to test this shopping-cart. Use the config file to set values used by the cart.
