@@ -16,5 +16,32 @@
 <cms:test ignore='0'>
     <cms:call 'execute-jobs' mylist />
 </cms:test>
+```
 
+## example with sitemaps
+
+```xml
+<cms:call 'add-job' name='gen_sitemap' list='mylist' masterpage='sitemaps_generator.php' qs='limit=100' />
+<cms:call 'php-time-limit' '0' />
+
+<cms:test ignore='0'>
+   <cms:call 'execute-jobs' mylist />
+</cms:test>
+```
+
+\- or -
+
+```xml
+<cms:if "<cms:is_ajax />">
+   <cms:if "<cms:call 'is-lockable' 'test' />">
+       <cms:call 'task-file-runner' />
+   </cms:if>
+</cms:if>
+
+<cms:call 'add-job' name='gen_sitemap' list='mylist' masterpage='sitemaps_generator.php' qs='limit=10' />
+<cms:call 'php-time-limit' '0' />
+
+<cms:test ignore='0'>
+   <cms:call 'execute-jobs' mylist />
+</cms:test>
 ```

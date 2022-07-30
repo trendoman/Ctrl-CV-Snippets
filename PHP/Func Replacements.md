@@ -3,6 +3,7 @@
 ## array_column
 
 ```php
+<?
  /**
  *   Replacement for native PHP function 'array_column' which doesn't exist before PHP v5.5
  *
@@ -16,4 +17,21 @@
      }
  }
 
+```
+## hex2bin
+
+```php
+<?
+/**
+* "hex2bin" for obsolete PHP
+*/
+static function hex2bin ( $val )
+{
+   static $exists = NULL;
+   if($exists === true)  return \hex2bin($val);
+   if($exists === false) return \pack("H*", $val);
+
+   $exists = \function_exists('\hex2bin');
+   return self::hex2bin($val);
+}
 ```

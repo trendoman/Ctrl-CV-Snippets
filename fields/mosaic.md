@@ -47,3 +47,64 @@
   </cms:tile>
 </cms:mosaic>
  ```
+
+## with config
+
+```xml
+<cms:mosaic name="images" label="Produkt Images" >
+
+  <cms:tile name='tile_image' label='Image'>
+      <cms:editable name='image' label='Image' type='image' width='1700' show_preview='1' preview_width='300' order='10'/>
+      <cms:editable name='caption' label='Caption' type='text' order='20'/>
+
+      <cms:editable name='thumb_500' label='Thumb x500' width='500' height='500' show_preview='1' assoc_field='image' type='thumbnail' order='100' />
+      <cms:editable name='thumb_150' label='Thumb x150' width='150' height='150' show_preview='1' assoc_field='image' type='thumbnail' order='200' />
+
+      <cms:config_list_view>
+          <cms:field 'k_content' >
+              <div class="mosaic-list">
+                  <div class="row">
+                      <div class="cell cell-label col-md-2">
+                          <label>Image</label>
+                      </div>
+                      <div class="cell cell-content col-md-4">
+                          <div class="field-content">
+                              <a class="img-popup" href="<cms:show image />">
+                                  <img src="<cms:show image />" width="500">
+                              </a>
+                          </div>
+                      </div>
+                      <div class="cell cell-content col-md-3">
+                          <div class="field-content">
+                              <a class="img-popup" href="<cms:show thumb_500 />">
+                                  <img src="<cms:show thumb_500 />" width="350">
+                              </a>
+                          </div>
+                      </div>
+                      <div class="cell cell-content col-md-3">
+                          <div class="field-content">
+                              <a class="img-popup" href="<cms:show thumb_150 />">
+                                  <img src="<cms:show thumb_150 />" width="150">
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="cell cell-label col-md-2">
+                          <label>Caption</label>
+                      </div>
+                      <div class="cell cell-content col-md-10">
+                          <div class="field-content">
+                              <cms:show caption />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </cms:field>
+      </cms:config_list_view>
+
+  </cms:tile>
+
+</cms:mosaic>
+```
